@@ -5,9 +5,12 @@ import vueinit from '@/core/vue'
 //引入另外一個特別的東西叫做detenv詳細的介紹我還沒看過 說起來是可以存取.env檔案
 import detenv from 'dotenv'
 
+import { loadCommands } from "@/core/loader";
+
 //執行單位
-vueinit()
-detenv.config()
+vueinit();
+detenv.config();
+loadCommands();
 
 // Create a new client instance
 const client = new Client({ intents: [GatewayIntentBits.Guilds] });
