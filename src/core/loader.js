@@ -1,6 +1,7 @@
-import { Guild, REST, Routes } from 'discord.js'
-import fg, { async } from 'fast-glob'
-
+import { Guild, REST, Routes, Collection } from "discord.js";
+import fg, { async } from "fast-glob";
+import { useAppstore } from "@/store/app";
+import { event } from "../events/ready";
 
 //用來更新上傳斜線指令用的
 const updateSlash = async (commands) => {
@@ -15,7 +16,6 @@ const updateSlash = async (commands) => {
       body: commands,
     }
   );
-  console.log(restult);
   await rest.put(
     Routes.applicationGuildCommands(
       process.env.APPLICATION_ID,
@@ -27,14 +27,38 @@ const updateSlash = async (commands) => {
   );
 };
 
-export const loadCommands= async()=>{
-    const commands = [];
-    const files = await fg("./src/commands/**/index.js");
+//透過FG讓bot每次執行的時候都刷過一輪我們的index.js數量
+export const loadCommands = async () => {
+  const appStore = useAppstore();
+  const commands = [];
+  const actions = new Collection();
+  const files = await fg("./src/commands/**/index.js");
 
-    for (const file of files) {
-      const cmd = await import(file);
-      commands.push(cmd.command);
+  //抓出指令的上半部分指令對外的名稱以及說明
+  for (const file of files) {
+    const cmd = await import(file);
+    commands.push(cmd.command);
+    actions.set(cmd.command.name, cmd.action);
+  }
+
+  await updateSlash(commands);
+  appStore.commentsActionMap = actions;
+
+  console.log(appStore.commentsActionMap);
+};
+
+export const loadEvents = async () => {
+  const appStore = useAppstore();
+  const client = appStore.client;
+  const files = await fg("./src/events/**/index.js");
+
+  for (const file of files) {
+    const eventfiles = await import(file);
+
+    if (eventfiles.event.once) {
+      client.once(eventfiles.event.name, eventfiles.action);
+    } else {
+      client.on(eventfiles.event.name, eventfiles.action);
     }
-
-    await updateSlash(commands);
-}
+  }
+};
