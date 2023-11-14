@@ -4,9 +4,10 @@ import {
   SlashCommandBuilder,
   ApplicationCommandOptionType,
 } from "discord.js";
+import axios from "axios";
 
 export const command = new SlashCommandBuilder()
-  .setName("練等地圖輸入版")
+  .setName("這等級要去哪裡練等")
   .setDescription("資料來源巴哈新手精華區")
   .addStringOption((option) =>
     option.setName("輸入您的等級").setDescription("等級區間").setRequired(true)
@@ -39,6 +40,8 @@ export const action = async (ctx) => {
       return `https://media.discordapp.net/attachments/1173797883481432134/1173804156725776384/image.png`;
     } else if (levelInput >= 190 && levelInput < 200) {
       return `https://media.discordapp.net/attachments/1173797883481432134/1173804055173275648/image.png`;
+    } else {
+      return `你現在的等級是${levelInput}等，推薦練功地點還在製作中喔。`;
     }
   };
 
