@@ -30,7 +30,7 @@ export const action = async (ctx) => {
         .setLabel("幻影龜島 150~170")
         .setValue("幻影龜島"),
       new StringSelectMenuOptionBuilder()
-        .setLabel("幻影螞蟻洞窟 160~175")
+        .setLabel("幻影螞蟻洞窟 160~170")
         .setValue("幻影螞蟻洞窟"),
       new StringSelectMenuOptionBuilder()
         .setLabel("幻影迷藏森林 170~185")
