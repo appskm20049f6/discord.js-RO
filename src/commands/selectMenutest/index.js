@@ -86,7 +86,7 @@ export const action = async (ctx) => {
         );
       } else if (selectedValue === "幻影螞蟻洞窟") {
         await interaction.reply(
-          "https://www.ptt.cc/bbs/RO/M.1678196393.A.D27.html"
+          "https://media.discordapp.net/attachments/1173805554074931220/1173831295533580298/image.png?ex=65656295&is=6552ed95&hm=c9a5812a87eb60e153842cd043d1124e71f8bee3a751763f187b34dcac9c398a&="
         );
       } else if (selectedValue === "幻影迷藏森林") {
         await interaction.reply(
