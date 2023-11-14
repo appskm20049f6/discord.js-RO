@@ -30,6 +30,9 @@ export const action = async (ctx) => {
         .setLabel("幻影龜島 150~170")
         .setValue("幻影龜島"),
       new StringSelectMenuOptionBuilder()
+        .setLabel("幻影螞蟻洞窟 160~175")
+        .setValue("幻影螞蟻洞窟"),
+      new StringSelectMenuOptionBuilder()
         .setLabel("幻影迷藏森林 170~185")
         .setValue("幻影迷藏森林"),
       new StringSelectMenuOptionBuilder()
@@ -80,6 +83,10 @@ export const action = async (ctx) => {
       } else if (selectedValue === "幻影龜島") {
         await interaction.reply(
           "https://media.discordapp.net/attachments/1173797883481432134/1173803851984404580/image.png?ex=65654906&is=6552d406&hm=e6409b4d06a63bf73ec05c18ea8e26ab7dd692c2909fd5fac2c47eb139d783b5&=&width=658&height=569"
+        );
+      } else if (selectedValue === "幻影螞蟻洞窟") {
+        await interaction.reply(
+          "https://www.ptt.cc/bbs/RO/M.1678196393.A.D27.html"
         );
       } else if (selectedValue === "幻影迷藏森林") {
         await interaction.reply(
