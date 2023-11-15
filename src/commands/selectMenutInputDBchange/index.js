@@ -7,6 +7,7 @@ import {
 
 import { sheet_data } from "@/core/googleSheet";
 
+
 export const command = new SlashCommandBuilder()
   .setName("我幾等去哪練比較好")
   .setDescription("資料來源巴哈新手精華區")
