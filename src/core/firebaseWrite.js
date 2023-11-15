@@ -72,14 +72,14 @@ const mapData = [
 
 const writeData = async (mapName, lvMix, lvMax, url) => {
   for (let index = 0; index < mapData.length; index++) {
-    const userRef = ref(FirebaseDB, `Ro練功地圖/${index}`);
+    const userRef = ref(FirebaseDB, `Ro練功地圖/${[index]}`);
     try {
-      await set(userRef, [
-        mapData[index].mapName,
-        mapData[index].lvMix,
-        mapData[index].lvMax,
-        mapData[index].url,
-      ]);
+      await set(userRef, {
+        mapName: mapData[index].mapName,
+        lvMix: mapData[index].lvMix,
+        lvMax: mapData[index].lvMax,
+        url: mapData[index].url,
+      });
     } catch (error) {
       console.log("寫入資料時發生錯誤");
     }
