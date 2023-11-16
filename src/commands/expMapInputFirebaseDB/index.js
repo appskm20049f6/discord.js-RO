@@ -53,7 +53,6 @@ const replayContent = async (levelInput) => {
 
     return `${expMap.join("\n")}`;
 
-    //將回復的等級用陣列的方式去讀取api內的資料符合的輸入至expMap陣列中
   } catch (err) {
     console.log("sheet_data-err", err);
     return "資料發生錯誤，請確認輸入的內容為正確的等級區間";
