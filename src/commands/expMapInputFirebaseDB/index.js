@@ -56,7 +56,6 @@ const replayContent = async (levelInput) => {
       return `${levelInput}等還沒有相關資料，期待後續更新。`;
     }
 
-
   } catch (err) {
     console.log("sheet_data-err", err);
     return "資料發生錯誤，請確認輸入的內容為正確的等級區間";
