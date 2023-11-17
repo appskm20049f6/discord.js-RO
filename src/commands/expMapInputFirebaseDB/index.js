@@ -10,7 +10,7 @@ import { FirebaseDB } from "../../core/firebsaeDB";
 import { getDatabase, ref, set, get } from "firebase/database";
 
 export const command = new SlashCommandBuilder()
-  .setName("我幾等去哪練比較好")
+  .setName("幾等去哪練比較好")
   .setDescription("資料來源巴哈新手精華區")
   .addStringOption((option) =>
     option.setName("輸入您的等級").setDescription("等級區間").setRequired(true)
