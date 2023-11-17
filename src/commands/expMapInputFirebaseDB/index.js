@@ -5,7 +5,7 @@ import {
   ApplicationCommandOptionType,
 } from "discord.js";
 
-import { sheet_data } from "@/core/googleSheet";
+import { sheet_data } from "../../core/googleSheet";
 import { FirebaseDB } from "../../core/firebsaeDB";
 import { getDatabase, ref, set, get } from "firebase/database";
 
