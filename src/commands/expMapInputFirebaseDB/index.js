@@ -42,16 +42,20 @@ const replayContent = async (levelInput) => {
     const expMap = [];
 
     //將回復的等級用陣列的方式去讀取api內的資料符合的輸入至expMap陣列中
-    for (let index = 0; index < res.length; index++) {
-      if (
-        levelInput >= parseInt(res[index].lvMix) &&
-        levelInput <= parseInt(res[index].lvMax)
-      ) {
-        expMap.push(`${res[index].mapName}:${res[index].url}`);
+    if (levelInput > 0 && levelInput <= 200) {
+      for (let index = 0; index < res.length; index++) {
+        if (
+          levelInput >= parseInt(res[index].lvMix) &&
+          levelInput <= parseInt(res[index].lvMax)
+        ) {
+          expMap.push(`${res[index].mapName}:${res[index].url}`);
+        }
       }
+      return `${expMap.join("\n")}`;
+    } else {
+      return `${levelInput}等還沒有相關資料，期待後續更新。`;
     }
 
-    return `${expMap.join("\n")}`;
 
   } catch (err) {
     console.log("sheet_data-err", err);
