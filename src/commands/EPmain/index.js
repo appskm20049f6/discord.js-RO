@@ -9,7 +9,7 @@ import {
 
 export const command = new SlashCommandBuilder()
   .setName(`ep主線流程攻略`)
-  .setDescription("資料來源巴哈新手精華區");
+  .setDescription("資料來源巴哈姆特的主線流程攻略");
 
 export const action = async (ctx) => {
   // 建立選擇單選單
