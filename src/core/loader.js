@@ -1,6 +1,6 @@
 import { Guild, REST, Routes, Collection } from "discord.js";
 import fg, { async } from "fast-glob";
-import { useAppstore } from "@/store/app";
+import { useAppstore } from "../store/app";
 import { event } from "../events/ready";
 
 //用來更新上傳斜線指令用的
