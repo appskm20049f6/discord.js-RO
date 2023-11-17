@@ -86,7 +86,7 @@ export const action = async (ctx) => {
           前置任務要求：參觀EP 16.1【祝福儀式】
           等級要求：100等以上。
           需求物品：無。
-          注意事項：無
+          注意事項：無。
           `,
           components: [row],
         });
@@ -97,7 +97,7 @@ export const action = async (ctx) => {
           前置任務要求：特拉 葛洛麗雅
           等級要求：110等以上。
           需求物品：無。
-          注意事項：無
+          注意事項：無。
           `,
           components: [row],
         });
@@ -107,7 +107,7 @@ export const action = async (ctx) => {
           主線任務：EP17.2 賢者遺跡主線
           前置任務要求：EP 17.1 虛幻浮現主線
           等級要求：130等以上。
-          需求物品：無。
+          需求物品：1.天地樹葉 1個 2.螢光色的液體 10個 3.破裂之劍 10個
           注意事項：無。
           `,
           components: [row],
@@ -119,7 +119,7 @@ export const action = async (ctx) => {
           前置任務要求：EP17.2 主線-「消滅害蟲大作戰」完成
           等級要求：170等以上。
           需求物品：1.鋼鐵 3個 2.肉 1個 3.強韌木藤條 1個
-          注意事項：需要進行Boss戰，若無法進行通過將無法進入地圖「受侵略的普隆德拉」、副本「空中要塞」但可繼續前往ep17.2。
+          注意事項：無。
           `,
           components: [row],
         });
@@ -148,7 +148,7 @@ export const action = async (ctx) => {
           memory[0] === "星火同盟主線王室套裝"
         ) {
           await interaction.update({
-            content: "https://www.youtube.com/watch?v=4YO6b-6bGmg",
+            content: "https://www.youtube.com/watch?v=CIeJg0L7dzY",
             components: [indexMenu],
           });
         }
