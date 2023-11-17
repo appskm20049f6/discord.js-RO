@@ -6,6 +6,6 @@ export const command = new SlashCommandBuilder()
 
 export const action = async (ctx) => {
   ctx.reply(
-    "https://docs.google.com/spreadsheets/d/1AA9TqKp7tL_uOQRihMbWJ1mwOUAI-UeTeVWui8BNoKA/edit#gid=1138635395"
+    "https://docs.google.com/spreadsheets/d/1EMzvGrTtJFIyEhjS6sLhi01763SI7aoOJkzcwdvdhVE/edit#gid=753902965"
   );
 };
