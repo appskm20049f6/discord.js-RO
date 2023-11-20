@@ -16,15 +16,6 @@ const firebaseConfig = {
   messagingSenderId: process.env.FIREBASE_messagingSenderId,
   appId: process.env.FIREBASE_appId,
 };
-// const firebaseConfig = {
-//   apiKey: "AIzaSyAHncXW6zBfkF-qbVuSz_Uu3As-04PcsB0",
-//   authDomain: "discord-robot-cd647.firebaseapp.com",
-//   databaseURL: "https://discord-robot-cd647-default-rtdb.firebaseio.com",
-//   projectId: "discord-robot-cd647",
-//   storageBucket: "discord-robot-cd647.appspot.com",
-//   messagingSenderId: "222413591959",
-//   appId: "1:222413591959:web:4e7e978b54e063775520d2",
-// };
-// Initialize Firebase
+
 const app = initializeApp(firebaseConfig);
 export const FirebaseDB = getDatabase();
