@@ -42,7 +42,7 @@ const replayContent = async (levelInput) => {
     const expMap = [];
 
     //將回復的等級用陣列的方式去讀取api內的資料符合的輸入至expMap陣列中
-    if (levelInput > 0 && levelInput <= 200) {
+    if (levelInput > 0 && levelInput <= 250) {
       for (let index = 0; index < res.length; index++) {
         if (
           levelInput >= parseInt(res[index].lvMix) &&

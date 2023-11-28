@@ -68,6 +68,36 @@ const mapData = [
     lvMax: 200,
     url: "https://media.discordapp.net/attachments/1173797883481432134/1173804055173275648/image.png",
   },
+  {
+    mapName: "尼芙菲姆密穴一樓(死1)",
+    lvMix: 200,
+    lvMax: 215,
+    url: "https://media.discordapp.net/attachments/1173797883481432134/1178882414571958272/image.png",
+  },
+  {
+    mapName: "廢棄研究所 阿米希提婭 一樓 (研1)",
+    lvMix: 215,
+    lvMax: 230,
+    url: "https://media.discordapp.net/attachments/1173797883481432134/1178883341466992731/image.png",
+  },
+  {
+    mapName: "廢棄研究所 阿米希提婭 二樓 (研2)",
+    lvMix: 230,
+    lvMax: 240,
+    url: "https://media.discordapp.net/attachments/1173797883481432134/1178883341466992731/image.png",
+  },
+  {
+    mapName: "尼芙菲姆密穴二樓(死2)",
+    lvMix: 240,
+    lvMax: 250,
+    url: "https://media.discordapp.net/attachments/1173797883481432134/1178883961448054794/image.png",
+  },
+  {
+    mapName: "鐘塔：未知的地下室 資料較新未來會更動 看網頁比較快",
+    lvMix: 240,
+    lvMax: 270,
+    url: "https://forum.gamer.com.tw/C.php?bsn=4212&snA=431839",
+  },
 ];
 
 const writeData = async (mapName, lvMix, lvMax, url) => {
